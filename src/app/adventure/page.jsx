@@ -1,25 +1,7 @@
 "use client";
 import React from "react";
 import dynamic from "next/dynamic";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 
-import Advent1 from "../../../public/Images/AdventureSportAndCamps/Advent_1.jpg";
-import Image from "next/image";
-import Family from "../../../public/Images/AdventureSportAndCamps/family.png";
-import Safety from "../../../public/Images/AdventureSportAndCamps/safety.png";
-import Zipline from "../../../public/Images/AdventureSportAndCamps/zip-line.png";
-
-import Advent2 from "../../../public/Images/AdventureSportAndCamps/Advent_2.jpg";
-import Advent3 from "../../../public/Images/AdventureSportAndCamps/Advent_3.jpg";
-import Advent4 from "../../../public/Images/AdventureSportAndCamps/Advent_4.jpg";
-import Advent9 from "../../../public/Images/AdventureSportAndCamps/Advent_9.jpg";
-import Advent11 from "../../../public/Images/AdventureSportAndCamps/Advent_11.jpg";
-import Advent8 from "../../../public/Images/AdventureSportAndCamps/Advent_8.jpg";
 
 export default function Adventure() {
   const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
@@ -31,7 +13,7 @@ export default function Adventure() {
       description:
         "Ahead Group offers a diverse range of adventure activities, catering to both adrenaline enthusiasts and those seeking more relaxed experiences. Whether it's heart-pounding activities like rock climbing and zip-lining or serene pursuits like nature treks, there's something for everyone.",
 
-      image: Zipline,
+      image: "/Images/zip-line.png",
     },
     {
       title: "Safety First Approach",
@@ -39,7 +21,7 @@ export default function Adventure() {
       description:
         "Safety is our top priority. We ensure that all our activities are conducted in a safe and controlled environment. Our instructors are highly trained and experienced, and we use only the best equipment. We also conduct regular safety audits to ensure that our safety standards are always met.",
 
-      image: Safety,
+      image: "/Images/safety.png",
     },
 
     {
@@ -48,33 +30,33 @@ export default function Adventure() {
       description:
         "We offer a wide range of activities that are suitable for the whole family. Whether you're looking for a fun day out with the kids or a relaxing weekend getaway, we've got you covered. Our activities are suitable for all ages and skill levels, so everyone can join in on the fun.",
 
-      image: Family,
+      image: "/Images/family.png",
     },
   ];
 
   const images = [
     {
-      src: Advent2,
+      src: "/Images/Advent_2.jpg",
       alt: "Image 1",
     },
     {
-      src: Advent3,
+      src: "/Images/Advent_3.jpg",
       alt: "Image 2",
     },
     {
-      src: Advent4,
+      src: "/Images/Advent_4.jpg",
       alt: "Image 3",
     },
     {
-      src: Advent9,
+      src: "/Images/Advent_9.jpg",
       alt: "Image 4",
     },
     {
-      src: Advent8,
+      src: "/Images/Advent_11.jpg",
       alt: "Image 7",
     },
     {
-      src: Advent11,
+      src:  "/Images/Advent_11.jpg",
       alt: "Image 8",
     },
   ];
@@ -98,8 +80,8 @@ export default function Adventure() {
         <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
             <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
-              <Image
-                src={Advent1}
+              <img
+                src="/Images/Advent_1.jpg"
                 alt="Party"
                 className="absolute inset-0 h-full w-full object-cover"
               />
@@ -137,7 +119,7 @@ export default function Adventure() {
               return (
                 <div className=" p-4 md:w-1/3 flex" key={index}>
                   <div className="w-12 h-12 inline-flex items-center justify-center rounded-full mb-4 flex-shrink-0">
-                    <Image src={image} alt={title} />
+                    <img src={image} alt={title} />
                   </div>
                   <div className="flex-grow pl-6">
                     <h2 className="text-[#e3282c] text-lg title-font font-semibold mb-2">
@@ -169,7 +151,7 @@ export default function Adventure() {
         <div className="mt-10 grid  grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {images.map((image, index) => (
             <div key={index} className="w-full h-80">
-              <Image
+              <img
                 className="w-full h-full rounded-sm hover:scale-110 transition duration-500 cursor-pointer object-cover"
                 src={image.src}
                 alt={image.alt}

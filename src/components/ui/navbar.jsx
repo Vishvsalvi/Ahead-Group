@@ -1,7 +1,6 @@
 "use client"; // for nextjs 13.4 users
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import AheadLogo from "../../../public/Images/AheadLogo.jpg"
 import Image from "next/image";
 
 const Navbar = () => {

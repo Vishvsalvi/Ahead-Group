@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Logo from "../../../public/Images/AheadLogo.jpg";
 import Link from "next/link";
 
 const year = new Date().getFullYear();
@@ -10,7 +9,7 @@ const Footer = () => {
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <div className="flex justify-center text-teal-600 sm:justify-start">
-            <Image src={Logo} alt="Ahead Logo" className="w-20" />
+            <img src="/Images/AheadLogo.jpg" alt="Ahead Logo" className="w-20" />
           </div>
 
           <p className="mt-4 text-center text-sm text-gray-900 lg:mt-0 lg:text-right">

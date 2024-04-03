@@ -1,21 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import kick from "../../public/Images/Icons/taekwondo.png";
-import school from "../../public/Images/Icons/school.png";
-import education from "../../public/Images/Icons/education.png";
-import hiking from "../../public/Images/Icons/hiking.png";
-import leader from "../../public/Images/Icons/leader.png";
-import community from "../../public/Images/Icons/community.png";
-
-
-import Slide1 from "../../public/Images/SliderImages/Slide1.jpg";
-import Slide2 from "../../public/Images/SliderImages/Slide2.JPG";
-import Slide3 from "../../public/Images/SliderImages/Slide3.jpg";
-import Slide4 from "../../public/Images/SliderImages/Slide4.jpg";
-
-
-import Advent10 from "../../public/Images/AdventureSportAndCamps/Advent_9.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -31,41 +15,41 @@ const descriptionAndIcons = [
     title: "Tiny Minds, Big Dreams: Pre-Primary School",
     description:
       "Give your child the best start in life with Ahead Group's Pre-Primary School. Our curriculum is designed to help your child develop their social, emotional, and cognitive skills, preparing them for the next step in their educational journey.",
-    icon: school,
+    icon: "/Images/school.png",
   },
   {
     title: " Primary Education Beyond Boundaries: Primary School",
     description:
       "Experience education that goes beyond the classroom at Ahead Group's Primary School. Our dynamic approach to learning encourages curiosity and critical thinking, preparing students not just for exams but for the challenges of the ever-evolving world.",
-    icon: education,
+    icon: "/Images/education.png",
   },
   {
     title: " Kick into Confidence: Taekwondo Classes",
     description:
       "Step into the world of confidence and discipline with Ahead Group's Taekwondo classes. Our experienced instructors blend the art of self-defense with character development, empowering you to kick your way to both physical and mental strength.",
-    icon: kick,
+    icon: "/Images/taekwondo.png",
   },
   {
     title: "Conquer Nature, Conquer Yourself: Adventure Camps/Treks",
     description:
       "Explore the great outdoors with Ahead Group's Adventure Camps and Treks. Our experienced instructors will guide you through the wilderness, helping you develop your physical and mental strength as you conquer nature and yourself.",
-    icon: hiking,
+    icon: "/Images/hiking.png",
   },
   {
     title: "Develop, Thrive, Succeed: Holistic Development Programs",
     description:
       "Join Ahead Group's holistic development programs to unlock your full potential. From fostering creativity to building leadership skills, our programs go beyond academics, shaping well-rounded individuals ready to thrive in a competitive world.",
-    icon: leader,
+    icon: "/Images/leader.png",
   },
   {
     title: "Community Connection: Where Journeys Unite",
     description:
       "Become part of the Ahead Group community, a vibrant space where individuals connect, grow, and celebrate achievements. Whether it's through martial arts, education, adventure, or personal development, our community is a supportive network fostering lasting connections.",
-    icon: community,
+    icon: "/Images/community.png",
   },
 ];
 
-const images = ["./Images/Image4.jpg", "/Images/SliderImages/Slide1.jpg", "Images/SliderImages/Slide2.jpg", "Images/AdventureSportAndCamps/Advent_9.jpg"];
+const images = ["./Images/Image4.jpg", "/Images/SliderImages/Slide1.jpg", "Images/SliderImages/Slide2.jpg", "Images/Advent_9.jpg"];
 
 export default function Home() {
   return (
@@ -122,7 +106,7 @@ export default function Home() {
                 className="bg-[#fffff2] border border-gray flex items-start gap-4 transition-all duration-300 ease-in-out hover:shadow-md rounded-md py-4 px-4"
               >
                 <span className="shrink-0 rounded-lg p-4">
-                  <Image alt={item.icon} src={item.icon} height={60} />
+                  <img alt={item.icon} src={item.icon} className="h-12" />
                 </span>
 
                 <div>

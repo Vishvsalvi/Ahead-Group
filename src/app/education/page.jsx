@@ -1,44 +1,27 @@
-import Image from "next/image";
-import Img1 from "../../../public/Images/Preschool/Img1.JPG";
-import Img2 from "../../../public/Images/Preschool/Img2.JPG";
-import Img3 from "../../../public/Images/Preschool/Img3.JPG";
-import Img4 from "../../../public/Images/Preschool/Img4.JPG";
-import Img5 from "../../../public/Images/Preschool/Img5.JPG";
-import Img6 from "../../../public/Images/Preschool/Img6.JPG";
-import Img7 from "../../../public/Images/Preschool/Img7.JPG";
-
-import Educate from "../../../public/Images/Icons/educate.png";
-import Reward from "../../../public/Images/Icons/reward.png";
-import Elearning from "../../../public/Images/Icons/elearning.png";
-import Teacher from "../../../public/Images/Icons/teacher.png";
-import Camping from "../../../public/Images/Icons/camping.png";
-import Flags from "../../../public/Images/Icons/flags.png";
-
-import hero from "../../../public/Images/Preschool/Hero.webp"
 export default function Education() {
   const images = [
     {
-      src: Img1,
+      src: "/Images/Img1.JPG",
       alt: "Image 1",
     },
     {
-      src: Img7,
+      src: "/Images/Img7.JPG",
       alt: "Image 7",
     },
     {
-      src: Img3,
+      src: "/Images/Img3.JPG",
       alt: "Image 3",
     },
     {
-      src: Img4,
+      src: "/Images/Img4.JPG",
       alt: "Image 4",
     },
     {
-      src: Img5,
+      src: "/Images/Img5.JPG",
       alt: "Image 5",
     },
     {
-      src: Img6,
+      src: "/Images/Img6.JPG",
       alt: "Image 6",
     },
   ];
@@ -48,37 +31,37 @@ export default function Education() {
       title: "Recognized by reputed institutions",
       description:
         "Appreciations from reputed high schools and international schools in the Vasai-Virar area.",
-      imageSrc: Reward,
+      imageSrc: "/Images/educate.png",
     },
     {
       title: "Educational environment and co-curricular activities",
       description:
         "We provide a safe and secure environment for our students to learn and grow. Our students are encouraged to participate in various co-curricular activities like dance, music, art, and craft.",
-      imageSrc: Educate,
+      imageSrc: "/Images/educate.png",
     },
     {
       title: "Technology in the classroom",
       description:
         "We have a smart classroom with a projector and a computer. We use technology to enhance our students' learning experience.",
-      imageSrc: Elearning,
+      imageSrc: "/Images/elearning.png",
     },
     {
       title: "Highly qualified and experienced teachers",
       description:
         "Our teachers are highly qualified and experienced. They are trained in the latest teaching methodologies and techniques.",
-      imageSrc: Teacher,
+      imageSrc: "/Images/teacher.png",
     },
     {
       title: "Picnic and field trips",
       description:
         "We organize picnics and field trips for our students to give them a chance to explore the world around them.",
-      imageSrc: Camping,
+      imageSrc: "/Images/camping.png",
     },
     {
       title: "Annual day for students",
       description:
         "We organize an annual day for our students to showcase their talents and skills.",
-      imageSrc: Flags,
+      imageSrc: "/Images/flags.png",
     },
   ];
 
@@ -137,7 +120,7 @@ export default function Education() {
                 className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col"
               >
                 <div className="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full flex-shrink-0">
-                  <Image alt={index} src={imageSrc}></Image>
+                  <img alt={index} src={imageSrc}/>
                 </div>
                 <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
                   <h2 className="text-[#e3282c] text-xl title-font font-medium mb-2">
@@ -158,7 +141,7 @@ export default function Education() {
                   <p className="text-[#02111B] leading-relaxed text-base">{description}</p>
                 </div>
                 <div className="sm:w-32 sm:order-none order-first sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full flex-shrink-0">
-                  <Image alt={index} src={imageSrc}></Image>
+                  <img alt={index} src={imageSrc}/>
                 </div>
               </div>
             );
@@ -180,7 +163,7 @@ export default function Education() {
         <div className="mx-10 grid  grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 bg-[#FFFFF2]">
           {images.map((image, index) => (
             <div key={index} className="bg-[#FFFFF2] " >
-              <Image
+              <img
                 className="rounded-sm hover:scale-110 transition duration-500 cursor-pointer object-cover"
                 src={image.src}
                 alt={image.alt}
