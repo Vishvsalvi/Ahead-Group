@@ -21,7 +21,7 @@ export default function Education() {
       alt: "Image 5",
     },
     {
-      src: "/Images/Img6.JPG",
+      src: "/Images/Img6.jpg",
       alt: "Image 6",
     },
   ];
